@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: slategray;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('C:/Users/admin/Desktop/FRONT END TELE/TELE CODE 1.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    background: #1b1b1b;
+    width: 100%;
+    display: flex;
+    padding: 2% 2% 0% 0%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-img{
+    width: 200px;
+    margin: 0px 0px 10px 0px;
+}    
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+    margin: 0px 10px 16px 0px;
+}
+.nav-links ul li a{
+    color: silver;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+     width:100%;
+}
+.text-box{
+    width: 90%;
+    color:slategray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box h2{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: grey;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: sandybrown;
+    border: 1px solid turquoise;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{ 
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #ffff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*----- AboutUs -----*/
+
+.aboutus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.aboutus h1{
+    margin: 5px 70px 40px;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: ivory;
+}
+.aboutus h1::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.aboutus h1:hover::after{
+    width:60%;
+}
+.aboutus h2{
+    font-size: 36px;
+    font-weight: 600;
+}
+.aboutus p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.aboutus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30p;
+    position: relative;
+    overflow: hidden;
+}
+.aboutus-col img{
+    width: 100%;
+    height: 150%;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: ivory;
+    font-size: 35px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+.features{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    color:ivory;
+}
+p{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.features-col{
+    flex-basis: 31%;
+    background: royalblue;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px;
+}
+.features-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px)
+{
+    .row{
+        flex-direction: column;
+    }
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.contact us{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.contactus-col{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('C:/Users/admin/Desktop/FRONT END TELE/Contact tele.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    margin-top: 40px;
+}
+.contactus h1{
+    text-align: center;
+}
+
+
